@@ -7,6 +7,7 @@ import io
 @api_bp.route('/healthcheck', methods=['GET'])
 def healthcheck():
     print(f"---Health Checking Status: Ok!")
+    return jsonify({"status": "ok"}), 200
 
 @api_bp.route('/create_jira_story', methods=['POST'])
 def create_jira_story_endpoint():
