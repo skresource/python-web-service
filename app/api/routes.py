@@ -4,6 +4,10 @@ from app.services import AIService, JiraService
 from app.services.summary_generator import generate_summary
 import io
 
+@api_bp.route('/healthcheck', methods=['GET'])
+def healthcheck():
+    print(f"---Health Checking Status: Ok!")
+
 @api_bp.route('/create_jira_story', methods=['POST'])
 def create_jira_story_endpoint():
     data = request.get_json()
