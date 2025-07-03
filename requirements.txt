@@ -11,3 +11,4 @@ jira
 python-dotenv
 PyMuPDF
 google-generativeai
+gunicorn
