@@ -15,7 +15,7 @@ def create_app(config_class=Config):
      
     
     # Enable CORS
-    CORS(app, resources={r"/api/*": {"origins": "http://localhost:4200"}})
+   CORS(app, resources={r"/api/*": {"origins": "*"}})
 
     # Register blueprints
     from app.api import api_bp
